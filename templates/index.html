@@ -1,0 +1,12 @@
+{{ template "header.html" .}}
+
+{{range .payload }} <!-- loop for view books -->
+    
+    <a href="/book/{{.ID}}?auth={{$.auth}}">
+        <h2>{{.Title}}</h2>
+    </a>
+    <p>penulis : {{.Author}}</p>
+
+{{end}}
+
+{{ template "footer.html" .}}
